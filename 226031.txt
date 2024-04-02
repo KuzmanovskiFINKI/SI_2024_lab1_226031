@@ -1,0 +1,26 @@
+4. Направен е директориум со име SI_2024_lab1_226031 каде е иницијализиран git со git init
+5. Поврзување на локален репо со remote репо со помош на git remote add origin https://github.com/KuzmanovskiFINKI/SI_2024_lab1_226031.git
+6. Креираниот README.md го ставаме во staging phase со git add README.md , па правиме git commit -m "Initial commit" 
+7. Ги додаваме трите .java фајлови во staging phase со git add "*.java" , па правиме git commit -m "Add starter code"
+8. Ги синхронизираме сите гранки со оддалечениот репо со помош на git push -u origin master
+9. Креираме 2 нови гранки со помош на git branch bug1 и git branch bug2
+10. Се префрлуваме на гранката bug1 со помош на командата git checkout bug1
+11. По поправувањето на грешката правиме git add SILab1_1.java , па git commit -m "Fix wrong condition in filterOddLengthString"
+12. Се префрламе на гранката bug2 со git checkout bug2
+13. По поправувањето на грешката правиме git add SILab1_2.java , па git commit -m "Fix wrong condition in makeBigStringFrom"
+14. Се префрламе на гранката bug1 со git checkout bug1
+15. По направената измена правиме git add SILab1Main.java па git commit -m "Call method filterOddLengthStrings in main class"
+16. Се враќаме на гранката bug2 со git checkout bug2
+17. По направената измена правиме git add SILab1Main.java па git commit -m "Call method makeBigStringFrom in main class"
+18. Ги синхронизираме гранките со тоа што ќе направиме git push origin bug1 и git push origin bug2
+19. Се префрламе на master со git checkout master
+20. Ја спојуваме bug1 гранката кон master со git merge bug1 [додека сме на master гранката], спојувањето се изврши со FF техника
+21. Ги синхронизираме гранките со git push
+22. Се префрламе на bug2 со git checkout bug2
+23. Се појавува конфликт при git rebase master со промените на SILab1Main.java , и го решаваме мануелно, со што ги прифаќаме измените што веќе се направено на HEAD, па го ставаме фајлот кој имал конфликти но сега решени во staging phase со git add SILab1Main.java ,па повикуваме git rebase --continue
+24. git checkout master
+25. git merge bug1 , спојувањето се изврши со FF техника
+26. git push
+27. git push --all --force
+28. git add . па git commit -m "Final commit"
+29. git push
